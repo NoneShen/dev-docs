@@ -1,11 +1,11 @@
 <h1 align="center">Import NFT</h1>
 
-In order to import NFT on Poly Bridge, please making sure that your source chain NFT contract can support `ERC721`, `ERC721Metadata` and `ERC721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
-Except for source chain NFT contract, you need to Develop and deploy the mapping NFT contracts on target chain . Here are the three steps to help you to complete the process. 
+In order to import NFT on Poly Bridge, please make sure that your source chain NFT contract can support `ERC-721`, `ERC-721Metadata` and `ERC-721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
+Besides source chain NFT contract, you need to develop and deploy the mapping NFT contracts on target chain. Here are the three steps to assist you in completing the process. 
 
 ### Step1. Development for mapping NFT contract
-- There ia a mapping the NFT contract [template](https://github.com/polynetwork/nft-contracts/tree/main/contracts/erc721_template) provided by Poly Network.
-- The mapping contracts should support `ERC721`, `ERC721Metadata` and `ERC721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
+- There is a mapping NFT contract [template](https://github.com/polynetwork/nft-contracts/tree/main/contracts/erc721_template) provided by Poly Network.
+- The mapping contracts should support `ERC-721`, `ERC-721Metadata` and `ERC-721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
 - The mapping contracts need to implement a minting interface. The method will be invoked by [NFTLockProxy](../../Core_Smart_Contract/Contract/NFTLockProxy.md) in Poly Network. Here is an example:
 
    ```solidity 
