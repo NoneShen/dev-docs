@@ -1,10 +1,11 @@
 <h1 align="center">Import NFT</h1>
 
-The source NFT contract must support `ERC721`, `ERC721Metadata` and `ERC721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
+Your source chain NFT contract must support `ERC721`, `ERC721Metadata` and `ERC721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
 
 Here are the three steps to follow to import an NFT. 
-### Step1. Development and deployment
+### Step1. Development and deployment target chain contracts
 - Develop a contract following the NFT [template](https://github.com/polynetwork/nft-contracts/tree/main/contracts/erc721_template) provided by Poly Network.
+- This contract must support `ERC721`, `ERC721Metadata` and `ERC721Enumerable` interfaces with the [ERC-721 standard](https://eips.ethereum.org/EIPS/eip-721).
 - This contract implements a minting interface using the Poly Network standard:
   `function mintWithURI(address to, uint256 tokenId, string memory uri) external`
 - This method will be called in the [NFTLockProxy](../../Core_Smart_Contract/Contract/NFTLockProxy.md) contract of Poly Network.
